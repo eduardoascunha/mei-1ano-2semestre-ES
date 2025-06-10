@@ -1,0 +1,57 @@
+# alguns requests TYPER:
+python3 cliente/run.py criar-conta eduardovski@gmail.com eduardo
+
+- definir variavel de ambiente se necessário: export APP_USER="eduardo@gmail.com"
+python3 cliente/run.py login "eduardo@gmail.com" "eduardo"
+
+python3 cliente/run.py login-google
+
+python3 cliente/run.py listar-conteudo-cofre
+
+python3 cliente/run.py listar-conteudo-pasta {pasta_id}
+
+python3 cliente/run.py criar-pasta-na-raiz {nome_da_pasta}
+
+python3 cliente/run.py criar-pasta {nome_da_pasta} {pasta_pai_id}
+
+python3 cliente/run.py remover-pasta {pasta_id}
+
+python3 cliente/run.py listar-permissoes
+
+python3 cliente/run.py conceder-permissao maria@gmail.com 65837712-43a1-4135-a47d-e9e92cc15775 ficheiro read
+
+python3 cliente/run.py remover-permissao maria@gmail.com 65837712-43a1-4135-a47d-e9e92cc15775 ficheiro
+
+python3 cliente/run.py upload-ficheiro "conta@nova.com" "path do ficheiro no pc" "pasta pai no cofre"(opcional, se não for dado vai para a base do cofre)
+
+python3 cliente/run.py remover-ficheiro "pasta1/pasta2/nomeficheiro.txt" 
+
+python3 cliente/run.py ler-ficheiro "conta@nova.com" "ficheiroId" 
+
+python3 cliente/run.py modificar-ficheiro "conta@nova.com" "ficheiroId" 
+
+python3 cliente/run.py adicionar-ao-ficheiro "conta@nova.com" "ficheiroId" 
+
+
+# rodar 
+fastapi dev servidor/api.py
+
+# rodar https
+uvicorn servidor.api:app --host 127.0.0.1 --port 8000 --ssl-keyfile misc/server.key --ssl-certfile misc/server.crt
+
+# rodar https com certificados da CA
+python3 misc/gerar_ca_e_cert.py
+uvicorn servidor.api:app --host 127.0.0.1 --port 8000 --ssl-keyfile misc/certs/server.key.pem --ssl-certfile misc/certs/fullchain.pem
+
+# aceder ao postegres
+psql -U admines -d cofredigital -h localhost
+
+
+# p3
+python3 cliente/run.py criar-conta eduardoascunha1@gmail.com eduardo
+
+python3 cliente/run.py login-google
+
+python3 cliente/run.py backup-google-drive
+
+python3 cliente/run.py get-backup-google-drive teste3.txt.enc.json

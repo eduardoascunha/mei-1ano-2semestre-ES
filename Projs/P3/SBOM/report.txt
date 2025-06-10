@@ -1,0 +1,370 @@
+## Componentes Instalados
+- Pygments==2.19.1 (pkg:pypi/pygments@2.19.1)
+- annotated-types==0.7.0 (pkg:pypi/annotated-types@0.7.0)
+- anyio==4.9.0 (pkg:pypi/anyio@4.9.0)
+- argon2-cffi==23.1.0 (pkg:pypi/argon2-cffi@23.1.0)
+- argon2-cffi-bindings==21.2.0 (pkg:pypi/argon2-cffi-bindings@21.2.0)
+- arrow==1.3.0 (pkg:pypi/arrow@1.3.0)
+- attrs==25.3.0 (pkg:pypi/attrs@25.3.0)
+- bcrypt==4.3.0 (pkg:pypi/bcrypt@4.3.0)
+- boolean.py==5.0 (pkg:pypi/boolean.py@5.0)
+- certifi==2025.4.26 (pkg:pypi/certifi@2025.4.26)
+- cffi==1.17.1 (pkg:pypi/cffi@1.17.1)
+- chardet==5.2.0 (pkg:pypi/chardet@5.2.0)
+- charset-normalizer==3.4.2 (pkg:pypi/charset-normalizer@3.4.2)
+- click==8.1.8 (pkg:pypi/click@8.1.8)
+- cryptography==44.0.3 (pkg:pypi/cryptography@44.0.3)
+- cyclonedx-bom==6.0.0 (pkg:pypi/cyclonedx-bom@6.0.0)
+- cyclonedx-python-lib==10.0.1 (pkg:pypi/cyclonedx-python-lib@10.0.1)
+- defusedxml==0.7.1 (pkg:pypi/defusedxml@0.7.1)
+- ecdsa==0.19.1 (pkg:pypi/ecdsa@0.19.1)
+- fastapi==0.115.12 (pkg:pypi/fastapi@0.115.12)
+- fqdn==1.5.1 (pkg:pypi/fqdn@1.5.1)
+- h11==0.16.0 (pkg:pypi/h11@0.16.0)
+- idna==3.10 (pkg:pypi/idna@3.10)
+- isoduration==20.11.0 (pkg:pypi/isoduration@20.11.0)
+- jsonpointer==3.0.0 (pkg:pypi/jsonpointer@3.0.0)
+- jsonschema==4.23.0 (pkg:pypi/jsonschema@4.23.0)
+- jsonschema-specifications==2025.4.1 (pkg:pypi/jsonschema-specifications@2025.4.1)
+- license-expression==30.4.1 (pkg:pypi/license-expression@30.4.1)
+- lxml==5.4.0 (pkg:pypi/lxml@5.4.0)
+- markdown-it-py==3.0.0 (pkg:pypi/markdown-it-py@3.0.0)
+- mdurl==0.1.2 (pkg:pypi/mdurl@0.1.2)
+- packageurl-python==0.16.0 (pkg:pypi/packageurl-python@0.16.0)
+- packaging==25.0 (pkg:pypi/packaging@25.0)
+- pip==24.0 (pkg:pypi/pip@24.0)
+- pip-requirements-parser==32.0.1 (pkg:pypi/pip-requirements-parser@32.0.1)
+- psycopg2-binary==2.9.10 (pkg:pypi/psycopg2-binary@2.9.10)
+- py-serializable==2.0.0 (pkg:pypi/py-serializable@2.0.0)
+- pyasn1==0.4.8 (pkg:pypi/pyasn1@0.4.8)
+- pycparser==2.22 (pkg:pypi/pycparser@2.22)
+- pycryptodome==3.22.0 (pkg:pypi/pycryptodome@3.22.0)
+- pydantic==2.11.4 (pkg:pypi/pydantic@2.11.4)
+- pydantic_core==2.33.2 (pkg:pypi/pydantic-core@2.33.2)
+- pyparsing==3.2.3 (pkg:pypi/pyparsing@3.2.3)
+- python-dateutil==2.9.0.post0 (pkg:pypi/python-dateutil@2.9.0.post0)
+- python-dotenv==1.1.0 (pkg:pypi/python-dotenv@1.1.0)
+- python-jose==3.4.0 (pkg:pypi/python-jose@3.4.0)
+- python-multipart==0.0.20 (pkg:pypi/python-multipart@0.0.20)
+- redis==6.0.0 (pkg:pypi/redis@6.0.0)
+- referencing==0.36.2 (pkg:pypi/referencing@0.36.2)
+- requests==2.32.3 (pkg:pypi/requests@2.32.3)
+- rfc3339-validator==0.1.4 (pkg:pypi/rfc3339-validator@0.1.4)
+- rfc3987==1.3.8 (pkg:pypi/rfc3987@1.3.8)
+- rich==14.0.0 (pkg:pypi/rich@14.0.0)
+- rpds-py==0.24.0 (pkg:pypi/rpds-py@0.24.0)
+- rsa==4.9.1 (pkg:pypi/rsa@4.9.1)
+- shellingham==1.5.4 (pkg:pypi/shellingham@1.5.4)
+- six==1.17.0 (pkg:pypi/six@1.17.0)
+- sniffio==1.3.1 (pkg:pypi/sniffio@1.3.1)
+- sortedcontainers==2.4.0 (pkg:pypi/sortedcontainers@2.4.0)
+- starlette==0.46.2 (pkg:pypi/starlette@0.46.2)
+- typer==0.15.3 (pkg:pypi/typer@0.15.3)
+- types-python-dateutil==2.9.0.20241206 (pkg:pypi/types-python-dateutil@2.9.0.20241206)
+- typing-inspection==0.4.0 (pkg:pypi/typing-inspection@0.4.0)
+- typing_extensions==4.13.2 (pkg:pypi/typing-extensions@4.13.2)
+- uri-template==1.3.0 (pkg:pypi/uri-template@1.3.0)
+- urllib3==2.4.0 (pkg:pypi/urllib3@2.4.0)
+- uvicorn==0.34.2 (pkg:pypi/uvicorn@0.34.2)
+- webcolors==24.11.1 (pkg:pypi/webcolors@24.11.1)
+
+## Dependências
+- Pygments==2.19.1:
+- annotated-types==0.7.0:
+    - typing_extensions==4.13.2
+- anyio==4.9.0:
+    - idna==3.10
+    - packaging==25.0
+    - sniffio==1.3.1
+    - typing_extensions==4.13.2
+- argon2-cffi-bindings==21.2.0:
+    - cffi==1.17.1
+- argon2-cffi==23.1.0:
+    - argon2-cffi-bindings==21.2.0
+    - typing_extensions==4.13.2
+- arrow==1.3.0:
+    - python-dateutil==2.9.0.post0
+    - types-python-dateutil==2.9.0.20241206
+- attrs==25.3.0:
+- bcrypt==4.3.0:
+- boolean.py==5.0:
+- certifi==2025.4.26:
+- cffi==1.17.1:
+    - pycparser==2.22
+- chardet==5.2.0:
+- charset-normalizer==3.4.2:
+- click==8.1.8:
+- cryptography==44.0.3:
+    - bcrypt==4.3.0
+    - certifi==2025.4.26
+    - cffi==1.17.1
+    - click==8.1.8
+- cyclonedx-bom==6.0.0:
+    - chardet==5.2.0
+    - cyclonedx-python-lib==10.0.1
+    - packageurl-python==0.16.0
+    - packaging==25.0
+    - pip-requirements-parser==32.0.1
+- cyclonedx-python-lib==10.0.1:
+    - jsonschema==4.23.0
+    - license-expression==30.4.1
+    - lxml==5.4.0
+    - packageurl-python==0.16.0
+    - py-serializable==2.0.0
+    - sortedcontainers==2.4.0
+- defusedxml==0.7.1:
+- ecdsa==0.19.1:
+    - six==1.17.0
+- fastapi==0.115.12:
+    - pydantic==2.11.4
+    - python-multipart==0.0.20
+    - starlette==0.46.2
+    - typing_extensions==4.13.2
+    - uvicorn==0.34.2
+- fqdn==1.5.1:
+- h11==0.16.0:
+- idna==3.10:
+- isoduration==20.11.0:
+    - arrow==1.3.0
+- jsonpointer==3.0.0:
+- jsonschema-specifications==2025.4.1:
+    - referencing==0.36.2
+- jsonschema==4.23.0:
+    - attrs==25.3.0
+    - fqdn==1.5.1
+    - idna==3.10
+    - isoduration==20.11.0
+    - jsonpointer==3.0.0
+    - jsonschema-specifications==2025.4.1
+    - referencing==0.36.2
+    - rfc3339-validator==0.1.4
+    - rfc3987==1.3.8
+    - rpds-py==0.24.0
+    - uri-template==1.3.0
+    - webcolors==24.11.1
+- license-expression==30.4.1:
+    - boolean.py==5.0
+- lxml==5.4.0:
+- markdown-it-py==3.0.0:
+    - mdurl==0.1.2
+- mdurl==0.1.2:
+- packageurl-python==0.16.0:
+- packaging==25.0:
+- pip-requirements-parser==32.0.1:
+    - packaging==25.0
+    - pyparsing==3.2.3
+- pip==24.0:
+- psycopg2-binary==2.9.10:
+- py-serializable==2.0.0:
+    - defusedxml==0.7.1
+- pyasn1==0.4.8:
+- pycparser==2.22:
+- pycryptodome==3.22.0:
+- pydantic==2.11.4:
+    - annotated-types==0.7.0
+    - pydantic_core==2.33.2
+    - typing-inspection==0.4.0
+    - typing_extensions==4.13.2
+- pydantic_core==2.33.2:
+    - typing_extensions==4.13.2
+- pyparsing==3.2.3:
+- python-dateutil==2.9.0.post0:
+    - six==1.17.0
+- python-dotenv==1.1.0:
+    - click==8.1.8
+- python-jose==3.4.0:
+    - cryptography==44.0.3
+    - ecdsa==0.19.1
+    - pyasn1==0.4.8
+    - pycryptodome==3.22.0
+    - rsa==4.9.1
+- python-multipart==0.0.20:
+- redis==6.0.0:
+    - cryptography==44.0.3
+    - requests==2.32.3
+- referencing==0.36.2:
+    - attrs==25.3.0
+    - rpds-py==0.24.0
+    - typing_extensions==4.13.2
+- requests==2.32.3:
+    - certifi==2025.4.26
+    - chardet==5.2.0
+    - charset-normalizer==3.4.2
+    - idna==3.10
+    - urllib3==2.4.0
+- rfc3339-validator==0.1.4:
+    - six==1.17.0
+- rfc3987==1.3.8:
+- rich==14.0.0:
+    - Pygments==2.19.1
+    - markdown-it-py==3.0.0
+    - typing_extensions==4.13.2
+- rpds-py==0.24.0:
+- rsa==4.9.1:
+    - pyasn1==0.4.8
+- shellingham==1.5.4:
+- six==1.17.0:
+- sniffio==1.3.1:
+- sortedcontainers==2.4.0:
+- starlette==0.46.2:
+    - anyio==4.9.0
+    - python-multipart==0.0.20
+    - typing_extensions==4.13.2
+- typer==0.15.3:
+    - click==8.1.8
+    - rich==14.0.0
+    - shellingham==1.5.4
+    - typing_extensions==4.13.2
+- types-python-dateutil==2.9.0.20241206:
+- typing-inspection==0.4.0:
+    - typing_extensions==4.13.2
+- typing_extensions==4.13.2:
+- uri-template==1.3.0:
+- urllib3==2.4.0:
+- uvicorn==0.34.2:
+    - click==8.1.8
+    - h11==0.16.0
+    - python-dotenv==1.1.0
+    - typing_extensions==4.13.2
+- webcolors==24.11.1:
+
+## Licenças
+- pkg:pypi/pygments@2.19.1:
+    - BSD-2-Clause
+- pkg:pypi/annotated-types@0.7.0:
+    - MIT
+- pkg:pypi/anyio@4.9.0:
+    - MIT
+- pkg:pypi/argon2-cffi@23.1.0:
+    - MIT
+- pkg:pypi/argon2-cffi-bindings@21.2.0:
+    - MIT
+- pkg:pypi/arrow@1.3.0:
+    - N/A
+- pkg:pypi/attrs@25.3.0:
+    - N/A
+- pkg:pypi/bcrypt@4.3.0:
+    - Apache-2.0
+- pkg:pypi/boolean.py@5.0:
+    - BSD-2-Clause
+- pkg:pypi/certifi@2025.4.26:
+    - MPL-2.0
+- pkg:pypi/cffi@1.17.1:
+    - MIT
+- pkg:pypi/chardet@5.2.0:
+    - N/A
+- pkg:pypi/charset-normalizer@3.4.2:
+    - MIT
+- pkg:pypi/click@8.1.8:
+    - N/A
+- pkg:pypi/cryptography@44.0.3:
+    - Apache-2.0 OR BSD-3-Clause
+- pkg:pypi/cyclonedx-bom@6.0.0:
+    - Apache-2.0
+- pkg:pypi/cyclonedx-python-lib@10.0.1:
+    - Apache-2.0
+- pkg:pypi/defusedxml@0.7.1:
+    - Python-2.0
+- pkg:pypi/ecdsa@0.19.1:
+    - MIT
+- pkg:pypi/fastapi@0.115.12:
+    - MIT
+- pkg:pypi/fqdn@1.5.1:
+    - N/A
+- pkg:pypi/h11@0.16.0:
+    - MIT
+- pkg:pypi/idna@3.10:
+    - N/A
+- pkg:pypi/isoduration@20.11.0:
+    - ISC
+- pkg:pypi/jsonpointer@3.0.0:
+    - N/A
+- pkg:pypi/jsonschema@4.23.0:
+    - MIT
+- pkg:pypi/jsonschema-specifications@2025.4.1:
+    - N/A
+- pkg:pypi/license-expression@30.4.1:
+    - Apache-2.0
+- pkg:pypi/lxml@5.4.0:
+    - BSD-3-Clause
+- pkg:pypi/markdown-it-py@3.0.0:
+    - MIT
+- pkg:pypi/mdurl@0.1.2:
+    - MIT
+- pkg:pypi/packageurl-python@0.16.0:
+    - MIT
+- pkg:pypi/packaging@25.0:
+    - N/A
+- pkg:pypi/pip@24.0:
+    - MIT
+- pkg:pypi/pip-requirements-parser@32.0.1:
+    - MIT
+- pkg:pypi/psycopg2-binary@2.9.10:
+    - N/A
+- pkg:pypi/py-serializable@2.0.0:
+    - Apache-2.0
+- pkg:pypi/pyasn1@0.4.8:
+    - N/A
+- pkg:pypi/pycparser@2.22:
+    - BSD-3-Clause
+- pkg:pypi/pycryptodome@3.22.0:
+    - N/A
+- pkg:pypi/pydantic@2.11.4:
+    - MIT
+- pkg:pypi/pydantic-core@2.33.2:
+    - MIT
+- pkg:pypi/pyparsing@3.2.3:
+    - MIT
+- pkg:pypi/python-dateutil@2.9.0.post0:
+    - N/A
+- pkg:pypi/python-dotenv@1.1.0:
+    - BSD-3-Clause
+- pkg:pypi/python-jose@3.4.0:
+    - MIT
+- pkg:pypi/python-multipart@0.0.20:
+    - N/A
+- pkg:pypi/redis@6.0.0:
+    - MIT
+- pkg:pypi/referencing@0.36.2:
+    - N/A
+- pkg:pypi/requests@2.32.3:
+    - Apache-2.0
+- pkg:pypi/rfc3339-validator@0.1.4:
+    - MIT
+- pkg:pypi/rfc3987@1.3.8:
+    - GPL-3.0-or-later
+- pkg:pypi/rich@14.0.0:
+    - MIT
+- pkg:pypi/rpds-py@0.24.0:
+    - MIT
+- pkg:pypi/rsa@4.9.1:
+    - Apache-2.0
+- pkg:pypi/shellingham@1.5.4:
+    - ISC
+- pkg:pypi/six@1.17.0:
+    - MIT
+- pkg:pypi/sniffio@1.3.1:
+    - MIT OR Apache-2.0
+- pkg:pypi/sortedcontainers@2.4.0:
+    - N/A
+- pkg:pypi/starlette@0.46.2:
+    - N/A
+- pkg:pypi/typer@0.15.3:
+    - MIT
+- pkg:pypi/types-python-dateutil@2.9.0.20241206:
+    - Apache-2.0
+- pkg:pypi/typing-inspection@0.4.0:
+    - MIT
+- pkg:pypi/typing-extensions@4.13.2:
+    - N/A
+- pkg:pypi/uri-template@1.3.0:
+    - MIT
+- pkg:pypi/urllib3@2.4.0:
+    - N/A
+- pkg:pypi/uvicorn@0.34.2:
+    - N/A
+- pkg:pypi/webcolors@24.11.1:
+    - BSD-3-Clause
+
+## Vulnerabilidades
+Nenhuma vulnerabilidade reportada.

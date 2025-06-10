@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600">
+  <!-- Fundo -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  
+  <!-- Cliente A (Dono) -->
+  <rect x="20" y="50" width="200" height="500" fill="#e6f2e6" stroke="#2ecc71" stroke-width="2"/>
+  <text x="120" y="30" text-anchor="middle" font-weight="bold">Cliente A (Dono)</text>
+  
+  <rect x="40" y="100" width="160" height="80" fill="#d4e6d4" stroke="#27ae60"/>
+  <text x="120" y="130" text-anchor="middle">Ficheiro Original</text>
+  <text x="120" y="150" text-anchor="middle">(A cifrar com</text>
+  <text x="120" y="170" text-anchor="middle">K-ficheiro)</text>
+  
+  <rect x="40" y="220" width="160" height="80" fill="#d4e6d4" stroke="#27ae60"/>
+  <text x="120" y="250" text-anchor="middle">Chave Única do </text>
+  <text x="120" y="270" text-anchor="middle">ficheiro (K-ficheiro)</text>
+  
+  <rect x="40" y="340" width="160" height="80" fill="#d4e6d4" stroke="#27ae60"/>
+  <text x="120" y="370" text-anchor="middle">Chave Pública</text>
+  <text x="120" y="390" text-anchor="middle">do Cliente B (Pb)</text>
+  
+  <!-- Servidor -->
+  <rect x="350" y="50" width="400" height="500" fill="#e6e6f2" stroke="#3498db" stroke-width="2"/>
+  <text x="550" y="30" text-anchor="middle" font-weight="bold">Servidor</text>
+  
+  <rect x="380" y="100" width="340" height="100" fill="#d4d4e6" stroke="#2980b9"/>
+  <text x="550" y="130" text-anchor="middle">Armazenamento de Ficheiros</text>
+  <text x="550" y="150" text-anchor="middle">- Ficheiro Cifrado com K-ficheiro</text>
+  
+  <rect x="380" y="250" width="340" height="100" fill="#d4d4e6" stroke="#2980b9"/>
+  <text x="550" y="280" text-anchor="middle">Metadados e chaves</text>
+  <text x="550" y="300" text-anchor="middle">- ID do ficheiro</text>
+  <text x="550" y="320" text-anchor="middle">- Chave K-ficheiro cifrada (com Pb)</text>
+  <text x="550" y="340" text-anchor="middle">- Permissões de Acesso</text>
+  
+  <rect x="380" y="400" width="340" height="100" fill="#d4d4e6" stroke="#2980b9"/>
+  <text x="550" y="430" text-anchor="middle">Log de Auditoria</text>
+  <text x="550" y="450" text-anchor="middle">- Utilizador</text>
+  <text x="550" y="470" text-anchor="middle">- Operação</text>
+  <text x="550" y="490" text-anchor="middle">- Timestamp</text>
+  
+  <!-- Cliente B (Recetor) -->
+  <rect x="880" y="50" width="200" height="500" fill="#f2e6e6" stroke="#e74c3c" stroke-width="2"/>
+  <text x="980" y="30" text-anchor="middle" font-weight="bold">Cliente B (Recetor)</text>
+  
+  <rect x="900" y="100" width="160" height="80" fill="#e6d4d4" stroke="#c0392b"/>
+  <text x="980" y="130" text-anchor="middle">A sua Chave</text>
+  <text x="980" y="150" text-anchor="middle">Privada (Kb)</text>
+
+  <rect x="900" y="250" width="160" height="80" fill="#e6d4d4" stroke="#c0392b"/>
+  <text x="980" y="280" text-anchor="middle">Chave K-ficheiro</text>
+  <text x="980" y="300" text-anchor="middle">decifrada (com Kb)</text>
+
+  <rect x="900" y="400" width="160" height="80" fill="#e6d4d4" stroke="#c0392b"/>
+  <text x="980" y="430" text-anchor="middle">Ficheiro Original</text>
+  <text x="980" y="450" text-anchor="middle">(decifrado com</text>
+  <text x="980" y="470" text-anchor="middle">K-ficheiro)</text>
+
+  <!-- Setas de Fluxo -->
+  <path d="M220,140 L350,140" stroke="#666" marker-end="url(#arrowhead)"/>
+  <path d="M220,260 L350,280" stroke="#666" marker-end="url(#arrowhead)"/>
+  <path d="M220,380 L350,300" stroke="#666" marker-end="url(#arrowhead)"/>
+  <path d="M750,140 L880,440" stroke="#666" marker-end="url(#arrowhead)"/>
+  <path d="M750,280 L880,280" stroke="#666" marker-end="url(#arrowhead)"/>
+
+  <!-- Marcador de Seta -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

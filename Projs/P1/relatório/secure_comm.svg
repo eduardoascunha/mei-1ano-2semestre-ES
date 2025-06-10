@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-weight="bold" font-size="24" fill="#333">Arquitetura de Segurança - Cofre Digital</text>
+
+  <!-- Client -->
+  <rect x="50" y="80" width="250" height="440" fill="#4CAF50" rx="15" ry="15" opacity="0.8"/>
+  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold" font-size="20">Cliente</text>
+
+  <!-- Server -->
+  <rect x="500" y="80" width="250" height="440" fill="#2196F3" rx="15" ry="15" opacity="0.8"/>
+  <text x="625" y="110" text-anchor="middle" fill="white" font-weight="bold" font-size="20">Servidor</text>
+
+  <!-- Client-side Security -->
+  <rect x="75" y="130" width="200" height="130" fill="#388E3C" rx="10" ry="10"/>
+  <text x="175" y="150" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Cifragem Client-Side</text>
+  <g font-size="12" fill="white">
+    <text x="85" y="170" text-anchor="start">- Cifragem AES-GCM</text>
+    <text x="85" y="190" text-anchor="start">- Chaves únicas por ficheiro</text>
+    <text x="85" y="210" text-anchor="start">- Derivação de chaves (Argon2)</text>
+    <text x="85" y="230" text-anchor="start">- Cifragem por envelope (RSA)</text>
+    <text x="85" y="250" text-anchor="start">- Verificação de integridade (GCM)</text>
+  </g>
+
+  <!-- Client Authentication -->
+  <rect x="75" y="270" width="200" height="110" fill="#388E3C" rx="10" ry="10"/>
+  <text x="175" y="290" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Autenticação Cliente</text>
+  <g font-size="12" fill="white">
+    <text x="85" y="310" text-anchor="start">- Validação de credenciais</text>
+    <text x="85" y="330" text-anchor="start">- Tokens de sessão</text>
+    <text x="85" y="350" text-anchor="start">- Timeout de sessão (10 min)</text>
+    <text x="85" y="370" text-anchor="start">- Par de chaves RSA</text>
+  </g>
+
+  <!-- Client Operations -->
+  <rect x="75" y="390" width="200" height="110" fill="#388E3C" rx="10" ry="10"/>
+  <text x="175" y="410" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Operações de Ficheiros</text>
+  <g font-size="12" fill="white">
+    <text x="85" y="430" text-anchor="start">- Read (less)</text>
+    <text x="85" y="450" text-anchor="start">- Write (vipe)</text>
+    <text x="85" y="470" text-anchor="start">- Append (vipe + concatenação)</text>
+    <text x="85" y="490" text-anchor="start">- Partilha com permissões</text>
+  </g>
+
+  <!-- Server-side Security -->
+  <rect x="525" y="130" width="200" height="130" fill="#1565C0" rx="10" ry="10"/>
+  <text x="625" y="150" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Segurança Server-Side</text>
+  <g font-size="12" fill="white">
+    <text x="535" y="170" text-anchor="start">- Armazenamento cifrado</text>
+    <text x="535" y="190" text-anchor="start">- Hash de palavras-passe (bcrypt)</text>
+    <text x="535" y="210" text-anchor="start">- Validação rigorosa de inputs</text>
+    <text x="535" y="230" text-anchor="start">- Zero knowledge (só guarda cifrado)</text>
+    <text x="535" y="250" text-anchor="start">- Proteção contra força bruta</text>
+  </g>
+
+  <!-- Server Permission Management -->
+  <rect x="525" y="270" width="200" height="110" fill="#1565C0" rx="10" ry="10"/>
+  <text x="625" y="290" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Gestão de Permissões</text>
+  <g font-size="12" fill="white">
+    <text x="535" y="310" text-anchor="start">- Níveis: Read/Append/Write</text>
+    <text x="535" y="330" text-anchor="start">- Herança de permissões</text>
+    <text x="535" y="350" text-anchor="start">- Verificação de acessos</text>
+    <text x="535" y="370" text-anchor="start">- Hierarquia de pastas</text>
+  </g>
+
+  <!-- Server Audit -->
+  <rect x="525" y="390" width="200" height="110" fill="#1565C0" rx="10" ry="10"/>
+  <text x="625" y="410" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Auditoria</text>
+  <g font-size="12" fill="white">
+    <text x="535" y="430" text-anchor="start">- Logs cifrados</text>
+    <text x="535" y="450" text-anchor="start">- Registos append-only</text>
+    <text x="535" y="470" text-anchor="start">- Assinaturas digitais</text>
+    <text x="535" y="490" text-anchor="start">- Isolamento de logs</text>
+  </g>
+
+  <!-- Secure Communication -->
+  <rect x="325" y="240" width="150" height="120" fill="#FF5722" rx="10" ry="10" opacity="0.9"/>
+  <text x="400" y="265" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Comunicação</text>
+  <g font-size="12" fill="white">
+    <text x="335" y="290" text-anchor="start">- TLS 1.3</text>
+    <text x="335" y="310" text-anchor="start">- Autenticação mútua</text>
+    <text x="335" y="330" text-anchor="start">- Mensagens JSON</text>
+    <text x="335" y="350" text-anchor="start">- Rate limiting</text>
+  </g>
+
+  <!-- Communication Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF5722"/>
+    </marker>
+  </defs>
+  <line x1="325" y1="260" x2="300" y2="260" stroke="#FF5722" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="340" x2="500" y2="340" stroke="#FF5722" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="260" x2="500" y2="260" stroke="#FF5722" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="325" y1="340" x2="300" y2="340" stroke="#FF5722" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Thread pool representation -->
+  <g transform="translate(650, 540)">
+    <circle cx="0" cy="0" r="8" fill="#1565C0"/>
+    <circle cx="-20" cy="0" r="8" fill="#1565C0"/>
+    <circle cx="-40" cy="0" r="8" fill="#1565C0"/>
+    <text x="-60" y="20" text-anchor="start" fill="#333" font-size="12">Thread pool</text>
+  </g>
+
+  <!-- Cifragem por envelope info -->
+  <g transform="translate(175, 540)">
+    <rect x="-80" y="-15" width="160" height="60" fill="#388E3C" rx="5" ry="5" opacity="0.8"/>
+    <text x="0" y="0" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Cifragem por envelope</text>
+    <text x="0" y="20" text-anchor="middle" fill="white" font-size="10">Chaves ficheiro cifradas com</text>
+    <text x="0" y="35" text-anchor="middle" fill="white" font-size="10">chave pública do utilizador</text>
+  </g>
+</svg>

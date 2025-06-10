@@ -1,0 +1,148 @@
+postgres=# CREATE DATABASE cofreDigital;
+CREATE DATABASE
+
+mas ficou "cofredigital" ig
+
+postgres=# CREATE USER admin WITH PASSWORD 'admin';
+GRANT ALL PRIVILEGES ON DATABASE cofreDigital TO admin;
+CREATE ROLE
+GRANT
+
+
+postgres=# GRANT ALL ON SCHEMA public TO admin;                                     
+GRANT ALL ON ALL TABLES IN SCHEMA public T
+O admin;                                  
+ALTER DEFAULT PRIVILEGES IN SCHEMA public 
+GRANT ALL ON TABLES TO admin;
+GRANT
+GRANT
+ALTER DEFAULT PRIVILEGES
+
+
+GRANT CREATE ON SCHEMA public TO admin;
+ALTER USER admin WITH SUPERUSER;
+
+
+-- ----- Para os cofres e arquivos
+-- Dropar tabelas existentes
+DROP TABLE IF EXISTS permissoes;
+DROP TABLE IF EXISTS arquivos;
+DROP TABLE IF EXISTS pastas;
+DROP TABLE IF EXISTS cofres;
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS chaves;
+
+-- Criar enum para tipos de permissão
+CREATE TYPE nivel_acesso AS ENUM ('read', 'append', 'write');
+
+-- Recriar tabelas
+CREATE TABLE usuarios (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha_hash VARCHAR(255) NOT NULL,
+    chave_publica TEXT NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT email_valido CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
+);
+
+CREATE TABLE cofres (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    dono_id UUID UNIQUE NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (dono_id) REFERENCES usuarios(id)
+);
+
+CREATE TABLE pastas (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nome VARCHAR(255) NOT NULL,
+    cofre_id UUID NOT NULL,
+    pasta_pai_id UUID,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cofre_id) REFERENCES cofres(id),
+    FOREIGN KEY (pasta_pai_id) REFERENCES pastas(id),
+    UNIQUE (nome, cofre_id, pasta_pai_id)
+);
+
+CREATE TABLE arquivos (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    nome VARCHAR(255) NOT NULL,
+    cofre_id UUID NOT NULL,
+    pasta_id UUID,
+    conteudo TEXT NOT NULL,
+    iv TEXT NOT NULL,
+    tag TEXT NOT NULL,        
+    tipo VARCHAR(50) NOT NULL,
+    tamanho BIGINT NOT NULL,
+    data_upload TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cofre_id) REFERENCES cofres(id),
+    FOREIGN KEY (pasta_id) REFERENCES pastas(id),
+    UNIQUE (nome, cofre_id, pasta_id)
+);
+
+-- Nova tabela para permissões
+CREATE TABLE permissoes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    usuario_id UUID NOT NULL,
+    recurso_id UUID NOT NULL,  -- ID do arquivo ou pasta
+    tipo_recurso VARCHAR(10) NOT NULL CHECK (tipo_recurso IN ('arquivo', 'pasta')),
+    nivel nivel_acesso NOT NULL,
+    data_concessao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    UNIQUE (usuario_id, recurso_id)  -- Um usuário só pode ter um nível de permissão por recurso
+);
+
+CREATE TABLE chaves (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ficheiro_id UUID NOT NULL,
+    utilizador_id UUID NOT NULL,
+    chave_cifrada TEXT NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ficheiro_id) REFERENCES arquivos(id) ON DELETE CASCADE,
+    FOREIGN KEY (utilizador_id) REFERENCES usuarios(id),
+    UNIQUE (ficheiro_id, utilizador_id)  -- Um utilizador só pode ter uma chave por ficheiro
+);
+
+-- Mudar o owner de todas as tabelas para admin
+ALTER TABLE usuarios OWNER TO admin;
+ALTER TABLE cofres OWNER TO admin;
+ALTER TABLE pastas OWNER TO admin;
+ALTER TABLE arquivos OWNER TO admin;
+ALTER TABLE permissoes OWNER TO admin;
+
+-- Mudar o owner do tipo enum também
+ALTER TYPE nivel_acesso OWNER TO admin;
+
+
+--------
+eduardo@eduardo-HP-Pavilion:~$ sudo -u postgres psql
+[sudo] senha para eduardo: 
+psql (16.8 (Ubuntu 16.8-0ubuntu0.24.04.1))
+Type "help" for help.
+
+postgres=# \c cofredigital 
+You are now connected to database "cofredigital" as user "postgres".
+cofredigital=# \dt
+         List of relations
+ Schema |   Name   | Type  | Owner 
+--------+----------+-------+-------
+ public | usuarios | table | admin
+(1 row)
+
+cofredigital=# \d usuarios
+cofredigital=# SELECT * FROM usuarios;
+ id | username |  senha  |        data_criacao        
+----+----------+---------+----------------------------
+  1 | eduardo  | eduardo | 2025-03-24 09:10:13.393591
+(1 row)
+
+cofredigital=# DROP TABLE IF EXISTS usuarios;
+DROP TABLE
+cofredigital=# SELECT * FROM usuarios;
+ERROR:  relation "usuarios" does not exist
+LINE 1: SELECT * FROM usuarios;
+                      ^
+cofredigital=# SELECT * FROM usuarios;
+cofredigital=# DROP TABLE usuarios;
+DROP TABLE
+cofredigital=# SELECT * FROM usuarios;
+
